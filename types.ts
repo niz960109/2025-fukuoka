@@ -19,7 +19,12 @@ export interface Activity {
   locationUrl?: string;
   tags?: Tag[];
   highlight?: boolean;
-  souvenirs?: string[];
+  
+  // Smart Guide Fields
+  souvenirs?: string[];     // For Shopping: "Must Buy"
+  mustTry?: string[];       // For Food: "Must Eat/Order"
+  reservationNote?: string; // For Bookings: "Reservation Code/Time"
+  guideTips?: string;       // For Spots: "Guide's Secret Tips"
 }
 
 export type WeatherType = 'sunny' | 'cloudy' | 'rainy';

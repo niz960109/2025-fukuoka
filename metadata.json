@@ -1,5 +1,5 @@
 {
-  "name": "Fukuoka Elegant Trip 2025",
+  "name": "fukuoka 2025",
   "description": "A refined travel itinerary application designed for a trip to Fukuoka with elders, featuring day-by-day plans, budget tracking, and travel information.",
   "requestFramePermissions": [
     "geolocation",

@@ -123,20 +123,22 @@ export const DAY_1: DayPlan = {
     {
       id: 'd1-1', type: 'transport', time: '19:55 - 21:00', title: '抵達福岡 & 飯店 Check-in',
       description: 'BR102 抵達福岡。搭乘計程車前往博多站飯店放行李。',
-      tags: [{ type: 'tip', label: '出關預留1小時' }],
+      guideTips: '出關預留1小時，計程車招呼站位於國內線航廈前（需搭接駁車）。',
+      tags: [{ type: 'tip', label: '計程車約¥1500' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Band+Hotel+Hakata',
     },
     {
       id: 'd1-2', type: 'food', time: '21:00 - 22:00', title: '晚餐：博多烏龍麵',
-      description: '因幡うどん (Inaba Udon)。博多烏龍麵口感軟綿溫潤，適合搭機後享用。',
-      tags: [{ type: 'food', label: '在地老店' }],
+      description: '因幡うどん (Inaba Udon)。博多烏龍麵口感軟綿溫潤，適合搭機後享用，不傷胃。',
       openingHours: '至 23:00',
+      mustTry: ['牛蒡天婦羅烏龍麵 (ごぼう天うどん)', '稻荷壽司'],
+      tags: [{ type: 'food', label: '在地老店' }],
     },
     {
       id: 'd1-3', type: 'spot', time: '22:00 - 22:30', title: '博多車站聖誕市集',
-      description: '欣賞站前廣場燈飾 (光之街)。',
+      description: '欣賞站前廣場燈飾 (光之街)，感受日本的聖誕氣氛。',
       openingHours: '至 24:00',
-      tags: [{ type: 'food', label: '熱紅酒' }],
+      mustTry: ['熱紅酒 (附馬克杯)', '吉拿棒'],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Hakata+Station+Christmas+Market',
     }
   ]
@@ -152,27 +154,31 @@ export const DAY_2: DayPlan = {
     {
       id: 'd2-1', type: 'transport', time: '09:00 - 09:40', title: '前往太宰府',
       description: '搭乘旅人號巴士或西鐵電車前往太宰府。',
+      guideTips: '若搭西鐵，可注意是否搭到「旅人」觀光列車，車廂有特殊彩繪。',
       tags: [{ type: 'info', label: '西鐵太宰府站' }],
     },
     {
       id: 'd2-info-1', type: 'info', time: '順遊', title: '收集：太宰府水溝蓋卡',
       description: '地點：太宰府觀光案內所 (太宰府車站內)。',
       openingHours: '09:00 - 17:00',
+      guideTips: '進站後左手邊，直接向櫃檯詢問「Manhole Card」。',
       tags: [{ type: 'card', label: '水溝蓋卡' }],
     },
     {
       id: 'd2-2', type: 'spot', time: '10:00 - 11:30', title: '太宰府天滿宮',
-      description: '重點參觀：藤本壯介設計的「臨時本殿」(漂浮森林)，屋頂種滿植物，非常特別。',
+      description: '參觀藤本壯介設計的「臨時本殿」(漂浮森林)，屋頂種滿植物，非常特別。',
       openingHours: '06:30 - 18:30',
-      tags: [{ type: 'spot', label: '藤本壯介' }, { type: 'food', label: '梅枝餅' }],
+      mustTry: ['梅枝餅 (參道上任選一家現烤的)'],
+      guideTips: '摸御神牛的頭可以長智慧。',
+      tags: [{ type: 'spot', label: '藤本壯介' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu',
-      souvenirs: ['梅枝餅', '御守']
     },
     {
       id: 'd2-3', type: 'spot', time: '11:30 - 12:00', title: '表參道星巴克',
       description: '隈研吾設計。運用傳統「地獄組」木結構，不用釘子接合，從內部延伸至街道。',
       openingHours: '08:00 - 20:00',
       tags: [{ type: 'spot', label: '隈研吾' }],
+      guideTips: '店內座位不多，建議外帶拍照即可。'
     },
     {
       id: 'd2-sub-1', type: 'spot', time: '順遊', title: '建築：九州國立博物館',
@@ -184,6 +190,7 @@ export const DAY_2: DayPlan = {
       id: 'd2-4', type: 'buy', time: '14:30 - 16:30', title: '天神商圈 & ACROS 福岡',
       description: '逛街前先看建築：ACROS 福岡 (Emilio Ambasz)。著名的階梯狀綠建築，可從公園側拍照。',
       openingHours: '10:00 - 20:00',
+      souvenirs: ['岩田屋百貨', '茅乃舍高湯包', 'Press Butter Sand'],
       tags: [{ type: 'spot', label: 'Emilio Ambasz' }, { type: 'buy', label: '岩田屋' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=ACROS+Fukuoka',
     },
@@ -195,14 +202,17 @@ export const DAY_2: DayPlan = {
     },
     {
       id: 'd2-5', type: 'food', time: '18:30 - 20:00', title: '晚餐：EEL EIGHT 鰻魚飯',
-      description: '★ 已預約。中洲川端附近的優雅鰻魚料理。',
+      description: '中洲川端附近的優雅鰻魚料理，環境舒適適合長輩。',
       openingHours: '11:00 - 21:00',
       highlight: true,
+      reservationNote: '★ 已預約 18:30 (Name: Chen)',
+      mustTry: ['鰻魚飯三吃 (Hitsumabushi)', '白燒鰻魚'],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=EEL+EIGHT+Fukuoka',
     },
     {
-      id: 'd2-6', type: 'spot', time: '20:30', title: '入住：三井花園飯店',
+      id: 'd2-6', type: 'transport', time: '20:30', title: '入住：三井花園飯店',
       description: '位於中洲，有大浴場可以放鬆。',
+      tags: [{ type: 'tip', label: '記得帶飯店卡去大浴場' }],
     }
   ]
 };
@@ -218,19 +228,21 @@ export const DAY_3: DayPlan = {
       id: 'd3-1', type: 'spot', time: '10:00 - 12:00', title: '麵包超人兒童博物館',
       description: '位於博多 Riverain Mall 5樓 (日建設計)。適合拍照與購買限定商品。',
       openingHours: '10:00 - 17:00',
+      souvenirs: ['博物館限定紅豆麵包', '角色造型氣球'],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Fukuoka+Anpanman+Children\'s+Museum',
-      souvenirs: ['限定紅豆麵包']
     },
     {
       id: 'd3-2', type: 'food', time: '12:30 - 13:30', title: 'Pain Stock 麵包店 (箱崎本店)',
-      description: '福岡評價最高的麵包店。必買：明太法國麵包。',
+      description: '福岡評價最高的麵包店，被譽為「日本最好吃的明太法國」。',
       openingHours: '10:00 - 18:00',
-      tags: [{ type: 'food', label: '明太法國' }],
+      mustTry: ['明太法國麵包 (Mentaiko France)', '蜂蜜吐司'],
+      tags: [{ type: 'food', label: '排隊名店' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Pain+Stock+Stock',
     },
     {
       id: 'd3-arch-1', type: 'spot', time: '順遊', title: '建築：Nexus World (香椎)',
       description: '就在 Pain Stock 車程10分處。Rem Koolhaas 與 Steven Holl 設計的集合住宅群，清水模愛好者必看。',
+      guideTips: '此為住宅區，請保持安靜，僅在外圍參觀。',
       tags: [{ type: 'spot', label: 'Rem Koolhaas' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Nexus+World+Fukuoka',
     },
@@ -245,12 +257,14 @@ export const DAY_3: DayPlan = {
       id: 'd3-4', type: 'spot', time: '18:00', title: 'Check-in: Hotel Il Palazzo',
       description: '★ 建築巡禮重點：Aldo Rossi 的大師之作。無窗的紅褐色立面，如神殿般莊嚴。內部剛完成翻新，是傳奇的設計飯店。',
       highlight: true,
+      guideTips: 'Check-in 大廳位於二樓，設計非常前衛，記得拍照。',
       tags: [{ type: 'spot', label: 'Aldo Rossi' }, { type: 'info', label: '換飯店' }],
       locationUrl: 'https://www.google.com/maps/search/?api=1&query=Hotel+Il+Palazzo',
     },
     {
       id: 'd3-5', type: 'food', time: '19:00', title: '晚餐：春吉/中洲周邊',
       description: '飯店位於春吉，周圍有很多時髦的居酒屋與餐廳。',
+      mustTry: ['博多一口餃子', '串燒'],
       tags: [{ type: 'food', label: '居酒屋' }],
     }
   ]
@@ -267,14 +281,15 @@ export const DAY_4_COMMON: Activity[] = [
     id: 'd4-common-1', type: 'buy', time: '14:30 - 15:30', title: '博多車站最後採買',
     description: '購買伴手禮 (努努雞、博多通饅頭)，領取水溝蓋卡後前往機場。',
     openingHours: '09:00 - 21:00',
+    souvenirs: ['博多通饅頭 (必買)', '努努雞 (冷炸雞)', 'Menbei (明太仙貝)'],
     tags: [{ type: 'buy', label: '伴手禮' }],
-    souvenirs: ['博多通文', '努努雞', 'Menbei']
   },
   {
     id: 'd4-common-2', type: 'transport', time: '16:00 (出發)', title: '前往機場 (FUK)',
     description: '搭計程車去機場。Check-in 後逛國內線航廈。',
     openingHours: '開櫃: 前 2.5 小時',
-    souvenirs: ['福砂屋長崎蛋糕', 'Royce']
+    guideTips: '國內線航廈比國際線好逛，有時間可以先去國內線買「福砂屋」。',
+    souvenirs: ['福砂屋長崎蛋糕', 'Royce 巧克力洋芋片'],
   }
 ];
 
@@ -283,6 +298,7 @@ export const DAY_4_OPTION_A: Activity[] = [
     id: 'd4-a-1', type: 'spot', time: '10:00 - 12:30', title: '大濠公園 & 美術館',
     description: '參觀福岡市美術館 (前川國男)。紅褐色磁磚外牆與拱形天花板是其特色。館外有草間彌生南瓜。',
     openingHours: '09:30 - 17:30',
+    mustTry: ['館內咖啡廳：大濠公園景色'],
     tags: [{ type: 'spot', label: '前川國男' }, { type: 'food', label: '湖畔星巴克' }],
     locationUrl: 'https://www.google.com/maps/search/?api=1&query=Fukuoka+Art+Museum',
   },
@@ -299,8 +315,9 @@ export const DAY_4_OPTION_B: Activity[] = [
     description: '白色鳥居與絕美海景 (建議包車)。',
     openingHours: '全天開放',
     highlight: true,
+    mustTry: ['糸島布丁 (海鹽口味)', 'Current 咖啡'],
     locationUrl: 'https://www.google.com/maps/search/?api=1&query=Sakurai+Futamigaura',
-    souvenirs: ['糸島布丁', '手工海鹽']
+    souvenirs: ['手工海鹽', '當地醬油']
   },
   {
     id: 'd4-b-sub-1', type: 'spot', time: '順遊', title: '周邊：糸島之顏 (Arts)',
